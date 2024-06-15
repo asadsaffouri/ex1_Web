@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web 1 calculater</title>
+   
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #app {
+            width: 320px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        #monitor {
+            background-color: #333;
+            color: #fff;
+            font-size: 2em;
+            padding: 20px;
+            text-align: right;
+            box-shadow: inset 0 -1px 5px rgba(0, 0, 0, 0.5);
+        }
+        .row {
+            display: flex;
+        }
+        .d-btn {
+            flex: 1;
+            margin: 2px;
+            text-align: center;
+            background-color: #444;
+            color: #fff;
+            padding: 20px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1.2em;
+        }
+        .d-btn:hover {
+            background-color: #222;
+        }
+        .wide {
+            flex: 4;
+            background-color: #555;
+        }
+        .clear {
+            flex: 1;
+            background-color: #d9534f;
+        }
+        .clear:hover {
+            background-color: #c9302c;
+        }
+        .d-btn:active {
+            background-color: #111;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div id="monitor"></div>
+        <div class="row">
+            <div class="d-btn">1</div>
+            <div class="d-btn">2</div>
+            <div class="d-btn">3</div>
+        </div>
+        <div class="row">
+            <div class="d-btn">4</div>
+            <div class="d-btn">5</div>
+            <div class="d-btn">6</div>
+        </div>
+        <div class="row">
+            <div class="d-btn">7</div>
+            <div class="d-btn">8</div>
+            <div class="d-btn">9</div>
+        </div>
+        <div class="row">
+            <div class="d-btn">0</div>
+            <div class="d-btn">+</div>
+            <div class="d-btn">-</div>
+        </div>
+        <div class="row">
+            <div class="d-btn">*</div>
+            <div class="d-btn">/</div>
+            <div class="d-btn">**</div>
+        </div>
+        <div class="row">
+            <div class="d-btn wide">calculate</div>
+        </div>
+        <div class="row">
+            <div class="d-btn clear">clear</div>
+        </div>
+    </div>
+     <!-- your app code goes here -->
+
+    <!-- special scripts for integration in App Gallery - must be placed at the bottom of the HTML after your code -->
+    <script>
+        // custom config for the MTW app 
+        const mtwAppConfig = {
+            border: true // app border in the MTW page                    
+        }
+
+        ///////////////////////////////////////////////////////
+        // implement this functions in order to use private API        
+        const sendPrivateApiRequest = async () => {
+            // your code here:
+            // sendRequestToParent({ cat: 'getAssets' })
+        }        
+
+        const acceptPrivateApiResponse = async (data) => {
+            // process received data here:
+            // console.log(data)
+        }
+
+        // use this in order to send on document load
+        document.addEventListener('DOMContentLoaded', () => {
+            // your code here:
+            //sendRequestToParent({ method: 'getAssets' })
+        })
+
+    </script>
+    <script src="https://morethanwallet.com/appstore/index.js"></script>
+</body>
+</html>
